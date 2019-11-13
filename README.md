@@ -1,6 +1,6 @@
-# vipa-turks
+# vipaturks
 
-**vipa-turks** is an intelligent annotation platform embedded with active sample mining, based on the famous [DataTurks](https://github.com/DataTurks/DataTurks).
+**vipaturks** is an intelligent annotation platform embedded with active sample mining, based on the famous [DataTurks](https://github.com/DataTurks/DataTurks).
 
 The abundant features and friendly UI are the main reason why we choose Dataturks.
 
@@ -8,6 +8,16 @@ The abundant features and friendly UI are the main reason why we choose Dataturk
 ##  Updating
 - 2019.11.13, deploy original DataTurks, build docker image successfully.
 
+
+## usage
+build docker image
+```
+$ docker build -t vipa/vipaturks:1.0 -f hope/docker/Dockerfile .
+```
+run image as container
+```
+docker run --name=vipa_turks -d -p 80:80 vipa/vipaturks:1.0  
+```
 
 ## Reference
 
