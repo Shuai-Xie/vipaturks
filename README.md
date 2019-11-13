@@ -11,11 +11,13 @@ The abundant features and friendly UI are the main reason why we choose Dataturk
 
 ## usage
 build docker image
-```
+```bash
 $ docker build -t vipa/vipaturks:1.0 -f hope/docker/Dockerfile .
 ```
+
 run image as container
-```
+
+```bash
 docker run --name=vipa_turks -d -p 80:80 vipa/vipaturks:1.0  
 ```
 
