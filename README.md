@@ -6,7 +6,7 @@ The abundant features and friendly UI are the main reason why we choose Dataturk
 
 
 ##  Updating
-- 2019.10.21, deploy original DataTurks, build docker image successfully.
+- 2019.11.13, deploy original DataTurks, build docker image successfully.
 
 
 ## Reference

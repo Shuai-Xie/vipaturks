@@ -1,0 +1,20 @@
+# Ignore everything
+**
+
+# Allow files and directories
+# 如果 ignore 重复，以后面匹配为准，以下路径开头保留
+!.dockerignore
+!./bazaar/**
+!./hope/docker/**
+!./hope/target/dataturks-1.0-SNAPSHOT.jar
+!./hope/onprem.yml
+
+# Ignore unnecessary files inside allowed directories
+# This should go after the allowed directories
+# 排除所有缓存和日志
+**/*~
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+**/.idea
+./bazaar/node_modules/**

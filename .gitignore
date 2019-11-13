@@ -1,6 +1,12 @@
-.idea/
+.DS_Store
+
+.idea/*.xml
+.idea/*.iml
+.idea/*/*.xml
+
 hope/target
-node_modules/
+bazzar/node_modules
+
 logs/
 dist/
 !*/bazaar/semantic/dist/*
