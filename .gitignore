@@ -3,6 +3,3 @@
 .idea/*.xml
 .idea/*.iml
 .idea/*/*.xml
-
-hope/target
-bazzar/node_modules

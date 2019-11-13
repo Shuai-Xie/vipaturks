@@ -19,9 +19,8 @@ RUN mkdir $BASE_DIR/logs
 
 WORKDIR $BASE_DIR
 
-# todo: 备份旧的配置文件
+# 替换国内 source.list
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
-# 替换为我们自定义的配置文件
 COPY $LOCAL_DOCKER_DIR/sources.list /etc/apt/sources.list
 
 # Install basics
