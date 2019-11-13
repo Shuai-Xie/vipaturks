@@ -5,10 +5,11 @@ RUN echo "LC_ALL=en_US.UTF-8" >> /etc/environment
 RUN echo "LANG=en_US.UTF-8" >> /etc/environment
 RUN echo "NODE_ENV=development" >> /etc/environment
 
+# 指定容器目录
 ENV BASE_DIR=/home/dataturks
 ENV BAZAR_PARENT_DIR=/home/dataturks
 
-# 指定了 Dockerfile 应该在根目录
+# 指定本地目录
 ENV LOCAL_DOCKER_DIR=./hope/docker
 ENV LOCAL_BAZAAR_DIR=./bazaar
 ENV LOCAL_HOPE_DIR=./hope/
