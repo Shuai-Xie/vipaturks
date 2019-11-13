@@ -6,12 +6,3 @@
 
 hope/target
 bazzar/node_modules
-
-logs/
-dist/
-!*/bazaar/semantic/dist/*
-*.iml
-webpack-assets.json
-webpack-stats.json
-npm-debug.log
-*.swp
