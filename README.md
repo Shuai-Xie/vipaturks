@@ -10,9 +10,16 @@ The abundant features and friendly UI are the main reason why we choose Dataturk
 
 
 ## usage
+build *.jar
+
+```bash
+cd hope
+mvn package -DskipTests 
+```
+
 build docker image
 ```bash
-$ docker build -t vipa/vipaturks:1.0 -f hope/docker/Dockerfile .
+docker build -t vipa/vipaturks:1.0 -f hope/docker/Dockerfile .
 ```
 
 run image as container

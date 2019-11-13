@@ -18,3 +18,6 @@
 **/Thumbs.db
 **/.idea
 ./bazaar/node_modules/**
+
+.gitignore
+README.md

@@ -59,12 +59,11 @@ RUN apt-get -y install build-essential && \
 	nodemon -v && \
     apt-get clean
 
-# todo 国内 cnpm 代替 npm
+# 国内 cnpm 代替 npm
 #RUN	npm install -g cnpm --registry=https://registry.npm.taobao.org && \
 #    cnpm install -g nodemon && \
 #    nodemon -v && \
 #    apt-get clean
-
 
 # Copy Bazaar.
 RUN mkdir $BAZAR_PARENT_DIR/bazaar
@@ -96,12 +95,13 @@ WORKDIR $BAZAR_PARENT_DIR/bazaar
 RUN rm -rf $BAZAR_PARENT_DIR/bazaar/uploads && \
 	mkdir $BAZAR_PARENT_DIR/bazaar/uploads
 
-# todo: 更换 cnpm
+# add npm audit fix
 RUN	npm install && \
 	npm run build-onprem && \
 #	npm audit fix && \
 	npm prune
 
+# 更换 cnpm
 #RUN	cnpm install && \
 #	cnpm run build-onprem && \
 #	cnpm prune

@@ -13,4 +13,3 @@ echo "Staring npm run start-onprem"
 npm run start-onprem
 
 while true; do sleep 1; done
-
