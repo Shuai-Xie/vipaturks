@@ -31,23 +31,21 @@ RUN apt-get update && \
 	apt-get install -y libapache2-mod-php7.0 && \
 	apt-get clean
 
+# init mysql DB, todo: add sh
+COPY $LOCAL_DOCKER_DIR/mysqlInit.sql $BASE_DIR/mysqlInit.sql
+COPY $LOCAL_DOCKER_DIR/init.sh $BASE_DIR/init.sh
+RUN chmod +x ./init.sh && \
+	sh ./init.sh
+
 # mac doesn't have sites-available, directly put in /etc/apache2/httpd.conf
 COPY $LOCAL_DOCKER_DIR/onprem-dataturks.com.conf /etc/apache2/sites-available/
 COPY $LOCAL_DOCKER_DIR/onprem-dataturks.com.conf /etc/apache2/sites-available/000-default.conf
-
-#todo: vim /etc/apache2/sites-available/default, ServerName 127.0.0.1
 
 RUN a2enmod proxy_http && \
     a2enmod php7.0 && \
     a2ensite onprem-dataturks.com.conf
 
 WORKDIR $BASE_DIR
-
-# init mysql DB, todo: add sh
-COPY $LOCAL_DOCKER_DIR/mysqlInit.sql $BASE_DIR/mysqlInit.sql
-COPY $LOCAL_DOCKER_DIR/init.sh $BASE_DIR/init.sh
-RUN chmod +x ./init.sh && \
-	sh ./init.sh
 
 # Install Node 8
 RUN apt-get -y install build-essential && \
@@ -132,7 +130,6 @@ EXPOSE 80
 
 COPY $LOCAL_HOPE_DIR/target/dataturks-1.0-SNAPSHOT.jar $BASE_DIR/dataturks-1.0-SNAPSHOT.jar
 COPY $LOCAL_HOPE_DIR/onprem.yml $BASE_DIR/onprem.yml
-
 COPY $LOCAL_DOCKER_DIR/startup.sh $BASE_DIR/startup.sh
 RUN chmod +x ./startup.sh
 CMD ./startup.sh > ./startup_log.log
