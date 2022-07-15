@@ -19,7 +19,7 @@
         <commons-dbutils.version>1.6</commons-dbutils.version>
         <httpcomponents.version>4.3</httpcomponents.version>
         <tika.version>1.17</tika.version>
-        <aws.version>1.11.300</aws.version>
+        <aws.version>1.12.261</aws.version>
     </properties>
 
 
