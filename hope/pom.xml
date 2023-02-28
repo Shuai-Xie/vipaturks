@@ -18,7 +18,7 @@
         <mysql-connector.version>5.1.29</mysql-connector.version>
         <commons-dbutils.version>1.6</commons-dbutils.version>
         <httpcomponents.version>4.3</httpcomponents.version>
-        <tika.version>1.17</tika.version>
+        <tika.version>1.18</tika.version>
         <aws.version>1.11.300</aws.version>
     </properties>
 
