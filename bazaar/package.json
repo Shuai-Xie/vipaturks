@@ -113,7 +113,7 @@
     }
   },
   "dependencies": {
-    "aws-sdk": "^2.165.0",
+    "aws-sdk": "^2.1373.0",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.1",
     "babel-plugin-add-module-exports": "^0.1.2",
